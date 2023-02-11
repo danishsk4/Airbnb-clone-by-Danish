@@ -12,7 +12,7 @@ for (let i = 0; i < redheart.length; i++) {
 
 //popup script
 let filterBtn = document.getElementById("filterBtn");
-let mobileFilterBtn = document.getElementById("mobileFilterBtn");
+// let mobileFilterBtn = document.getElementById("mobileFilterBtn");
 let submitBtn = document.getElementById("submitBtn");
 let cancelBtn = document.getElementById("cancelBtn");
 let filterPopupEl = document.getElementById("filterPopup");
@@ -20,12 +20,24 @@ let filterPopupEl = document.getElementById("filterPopup");
 filterBtn.addEventListener("click", () => {
   filterPopupEl.classList.add("filterPopupDisplay");
 });
-mobileFilterBtn.addEventListener("click", () => {
-  filterPopupEl.classList.add("filterPopupDisplay");
-});
+
 submitBtn.addEventListener("click", () => {
   filterPopupEl.classList.remove("filterPopupDisplay");
 });
 cancelBtn.addEventListener("click", () => {
   filterPopupEl.classList.remove("filterPopupDisplay");
+});
+
+//mobileProfileBtn
+let mobileProfileBtn = document.getElementById("mobileProfileBtn");
+let profileNavbaarEl = document.getElementById("profile-navbaar");
+
+//for mobile
+let mobileProfileNavbaar = document.getElementById("mobile-profile-navbaar");
+let mobileProfileBtn1 = document.getElementById("mobileProfileBtn1");
+mobileProfileBtn.addEventListener("click", () => {
+  mobileProfileNavbaar.classList.toggle("mobile-profile-navbaar-display");
+});
+mobileProfileBtn1.addEventListener("click", () => {
+  profileNavbaarEl.classList.toggle("profile-navbaar-display");
 });
