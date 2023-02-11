@@ -23,11 +23,33 @@
 
     .filterPopupDisplay {
       visibility: visible;
-      box-shadow: 15px 15px 35px rgb(29, 28, 28);
+      box-shadow: 15px 15px 35px rgb(71, 70, 70);
+
+
     }
 
     .input {
       padding-left: 10px !important;
+    }
+
+    .profile-navbaar {
+      position: absolute;
+      top: 11%;
+      left: 82%;
+      box-shadow: 10px 10px 20px rgb(185, 173, 173);
+      visibility: hidden;
+    }
+
+    .profile-navbaar-display {
+      visibility: visible;
+    }
+
+    .mobile-profile-navbaar {
+      display: none;
+    }
+
+    .mobile-profile-navbaar-display {
+      display: block;
     }
   </style>
 
@@ -70,7 +92,8 @@
         <p class="pl-2"><a href="#">Become a host</a></p>
         <p><i class="bi bi-globe2 px-6 text-xl"></i></p>
 
-        <div class="border-slate-300 border-2 rounded-[50px] hover:bg-slate-200 text-[19px] px-2">
+        <div id="mobileProfileBtn1"
+          class="border-slate-300 border-2 rounded-[50px] hover:bg-slate-200 text-[19px] px-2">
           <i class="bi bi-list text-slate-600  p-0 w-8"></i>
           <i class="bi bi-person-circle text-slate-600  w-8"></i>
         </div>
@@ -79,9 +102,28 @@
   </div>
   <hr class="mt-5 border-1 border-slate-300" />
 
+
+
+  <!-- PROFILE NAVBAAR -->
+  <div id="profile-navbaar"
+    class="profile-navbaar w-[150px] sm:w-[220px] border border-1 rounded-md text-[13px] border-slate-300 py-2 bg-white ">
+    <div class="li ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Sign up</div>
+    <div class="li ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Log in</div>
+    <hr class="w-[130px] sm:w-[190px] mx-auto my-2 border-1 border-slate-300" />
+    <div class="li ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Airbnb your Home</div>
+    <div class="li ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Host an Experience</div>
+    <div class="li ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Help</div>
+  </div>
+
+
+
+
+
+
+
   <!-- popup boxes -->
   <!-- mx-auto mt-12 removed from here -->
-  <div class="w-[300px] sm:w-[550px]  bg-white border-3 border   rounded-2xl   filterPopup" id="filterPopup">
+  <div class=" w-[300px] sm:w-[550px]  bg-white border-3 border   rounded-2xl   filterPopup" id="filterPopup">
     <div
       class=" text-slate-600 w-[300px] sm:w-[550px] text-xl sm:text-[30px] mt-5 font-semibold flex justify-between px-5">
       <div>Filter</div>
@@ -118,9 +160,7 @@
     </form>
   </div>
 
-
   <!-- </div> -->
-
 
   <!-- searchbar before md -->
 
@@ -143,10 +183,23 @@
       </div>
     </div>
 
-    <div id="mobileFilterBtn" class="border-[2px] border-slate-300 p-1 rounded-[100%] mx-auto">
-      <i class="bi bi-filter sm:text-xl"></i>
+    <div id="mobileProfileBtn" class="border-[2px] border-slate-300 p-1 rounded-[100%] mx-auto">
+      <i class="bi bi-person-circle text-slate-600 sm:text-xl w-8"></i>
     </div>
   </div>
+
+
+  <!--MOBILE PROFILE NAVBAAR -->
+  <div id="mobile-profile-navbaar"
+    class="mobile-profile-navbaar md:hidden w-auto mx-auto border border-1 rounded-md text-[13px] border-slate-300 py-2 bg-white">
+    <div class="text-[17px] ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Sign up</div>
+    <div class="text-[17px] ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Log in</div>
+    <hr class="mx-[20px] w-auto my-2 border-1 border-slate-300" />
+    <div class="text-[17px] ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Airbnb your Home</div>
+    <div class="text-[17px] ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Host an Experience</div>
+    <div class="text-[17px] ml-[10px] hover:bg-[#e1e1d0] my-1 duration-500">Help</div>
+  </div>
+
 
 
   <!-- menubaar -->
@@ -226,7 +279,6 @@
       <p class="font-semibold font-sans text-[18px] pl-2">Filter</p>
     </div>
   </div>
-
 
 
 
