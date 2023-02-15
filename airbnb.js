@@ -41,3 +41,14 @@ mobileProfileBtn.addEventListener("click", () => {
 mobileProfileBtn1.addEventListener("click", () => {
   profileNavbaarEl.classList.toggle("profile-navbaar-display");
 });
+
+//-------- more cards on clicking button -----------
+
+let showMoreButton = document.getElementById("showMoreButton");
+let hidden = document.querySelectorAll(".hide");
+
+showMoreButton.addEventListener("click", () => {
+  hidden.forEach((elem) => {
+    elem.classList.toggle("show-on-click-button");
+  });
+});
